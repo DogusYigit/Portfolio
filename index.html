@@ -65,36 +65,36 @@
 <head>
     <style>
         #about {
-            position: relative; /* Pseudo-elementin doğru konumlanması için gerekli */
-            padding: 50px 0; /* İçeriğin etrafında boşluk bırakır */
+            position: relative; 
+            padding: 50px 0; 
         }
 
         #about::before {
-            content: ""; /* İçerik yok, sadece arka plan olacak */
+            content: ""; 
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('images/chess.jpg'); /* Arka plan resmi yolu */
-            background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
-            background-position: center; /* Resmi ortalar */
-            background-attachment: fixed; /* Arka planı sabitler */
-            opacity: 0.8; /* Saydamlık - arka plan resminin %50 saydam olması */
-            z-index: -1; /* İçeriğin ön planda olmasını sağlar */
+            background-image: url('images/chess.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            opacity: 0.8; 
+            z-index: -1;
         }
 
         #about .container {
             display: flex;
-            align-items: center; /* İçeriği dikeyde ortalar */
-            justify-content: space-between; /* İçeriği yatayda dağıtarak yerleştirir */
+            align-items: center; 
+            justify-content: space-between; 
         }
 
         #about .col-md-4 img {
-            max-width: 100%; /* Resmin genişliği konteynırın tamamını kapsar */
-            max-height: 100%; /* Resmin yüksekliği konteynırın tamamını kapsar */
-            object-fit: contain; /* Resmi orantılı şekilde sığdırır, kesmez */
-            border-radius: 8px; /* Resme köşe yuvarlama ekler (isteğe bağlı) */
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            border-radius: 8px; 
         }
     </style>
 </head>
@@ -121,29 +121,25 @@
     <!-- End #about -->
 
  <div id="projects" class="background-alt" style="position: relative; padding: 50px 0;">
-    <!-- Arka Plan Div'i -->
+    <!-- Background Div -->
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/view2.jpg'); background-size: cover; background-position: center; opacity: 0.7;"></div>
     
-    <!-- İçerikler -->
     <h2 class="heading">Projects</h2>
         <div class="container">
 <div class="row">
     <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; position: relative;">
 
-        <!-- Arka Plan Divi, opaklığı burada ayarlıyoruz -->
+    <!-- Background Div -->
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/SV2.png'); background-size: cover; background-position: center; opacity: 1; z-index: 0;"></div>
 
-        <!-- İçerik (Yazılar vs.) -->
         <div style="position: relative; z-index: 1; flex-grow: 1; text-align: center; padding: 0 20px;">
             <h3 style="color: white;">Shattered Veil</h3>
             <p style="color: white;">First-person adventure that doesn’t hold your hand</p>
             <a href="https://futuregames.itch.io/shattered-veil" style="color: #04ff00;" target="_blank">View Project</a>
         </div>
 
-        <!-- Bu kısımda Flex düzenlemesini düzeltelim -->
         <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding-top: 20px;">
             
-            <!-- Text bloğu, sol tarafta -->
             <div style="flex: 1; z-index: 1; text-align: left; padding: 0 20px;">
                 <h3 style="color: white;">Gameplay Programmer</h3>
                 <p style="color: white;">
@@ -151,7 +147,6 @@
                 </p>
             </div>
 
-            <!-- Video bloğu, sağ tarafta -->
             <div class="project-video" style="width: 300px; height: 300px; z-index: 1; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
                 <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
                     <source src="videos/GP2.mp4" type="video/mp4">
@@ -169,20 +164,17 @@
     <div class="row">
     <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; position: relative;">
 
-        <!-- Arka Plan Divi, opaklığı burada ayarlıyoruz -->
+    <!-- Background Div -->
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/TD2.png'); background-size: inherit; background-position: center; opacity: 1; z-index: 0;"></div>
 
-        <!-- İçerik (Yazılar vs.) -->
         <div style="position: relative; z-index: 1; flex-grow: 1; text-align: center; padding: 0 20px;">
             <h3 style="color: white;">Tom the Dragon</h3>
             <p style="color: white;">Fun, relaxing 3D platformer designed for kids</p>
             <a href="https://futuregames.itch.io/tomthedragon" style="color: #04ff00;" target="_blank">View Project</a>
         </div>
 
-        <!-- Bu kısımda Flex düzenlemesini düzeltelim -->
         <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding-top: 20px;">
             
-            <!-- Text bloğu, sol tarafta -->
             <div style="flex: 1; z-index: 1; text-align: left; padding: 0 20px;">
                 <h3 style="color: white;">Gameplay Programmer</h3>
                 <p style="color: white;">
@@ -190,7 +182,6 @@
                 </p>
             </div>
 
-            <!-- Video bloğu, sağ tarafta -->
             <div class="project-video" style="width: 300px; height: 300px; z-index: 1; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
                 <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
                     <source src="videos/TD_GP1.mp4" type="video/mp4">
