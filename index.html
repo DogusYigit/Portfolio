@@ -23,7 +23,7 @@
         <div id="mobile-menu-close">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-        <ul id="menu" class="shadow">
+        <ul id="menu" class="shadow" style="background-color: aliceblue;">
             <li>
                 <a href="#about">About</a>
             </li>
@@ -47,7 +47,7 @@
         <div id="lead-content">
             <h1>Dogus Yigit Elmali</h1>
             <h2>Game Programmer</h2>
-            <a href="CV/CV.pdf" class="btn-rounded-white">Download Resume</a>
+            <a href="CV/CV.pdf" class="btn-rounded-white" target="_blank">Download Resume</a>
         </div>
         <!-- End #lead-content -->
 
@@ -62,85 +62,144 @@
     </div>
     <!-- End #lead -->
 
-    <div id="about">
+<head>
+    <style>
+        #about {
+            position: relative; /* Pseudo-elementin doğru konumlanması için gerekli */
+            padding: 50px 0; /* İçeriğin etrafında boşluk bırakır */
+        }
+
+        #about::before {
+            content: ""; /* İçerik yok, sadece arka plan olacak */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/chess.jpg'); /* Arka plan resmi yolu */
+            background-size: cover; /* Arka planın tüm alanı kaplamasını sağlar */
+            background-position: center; /* Resmi ortalar */
+            background-attachment: fixed; /* Arka planı sabitler */
+            opacity: 0.8; /* Saydamlık - arka plan resminin %50 saydam olması */
+            z-index: -1; /* İçeriğin ön planda olmasını sağlar */
+        }
+
+        #about .container {
+            display: flex;
+            align-items: center; /* İçeriği dikeyde ortalar */
+            justify-content: space-between; /* İçeriği yatayda dağıtarak yerleştirir */
+        }
+
+        #about .col-md-4 img {
+            max-width: 100%; /* Resmin genişliği konteynırın tamamını kapsar */
+            max-height: 100%; /* Resmin yüksekliği konteynırın tamamını kapsar */
+            object-fit: contain; /* Resmi orantılı şekilde sığdırır, kesmez */
+            border-radius: 8px; /* Resme köşe yuvarlama ekler (isteğe bağlı) */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="about" style="position: relative; padding: 50px 0;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/-.jpg'); background-size: cover; background-position: center; opacity: 1; z-index: -1;"></div>
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
+                    <img src="images/Profile.jpg" alt="Profile Picture" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px;" />
                 </div>
-                <div class="col-md-8">
-                    <p style="text-align: justify; color: #333;">
+                <div class="col-md-8" style="position: relative; background-color: rgba(255, 255, 255, 0.932); padding: 20px; border-radius: 10px;">
+                    <h2 class="heading" style="color: #000000; margin: 0;">About Me</h2>
+                    <p style="text-align: justify; color: #000000;">
                         <br>&emsp;My academic journey has equipped me with a strong foundation in engineering principles, which I integrate with my enthusiasm for coding and game development. I thrive on the challenge of creating innovative solutions and bringing interactive experiences to life through programming. I have been involved in both day-to-day operations and the development of projects from the ground up.
                     </p>
                 </div>
             </div>
         </div>
     </div>
+</body>
     <!-- End #about -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 50px;">
-                        <div class="project-image" style="width: 300px; height: 300px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                            <img src="images/SV.jpg" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                        </div>
-                        <div style="flex-grow: 1; text-align: center; padding: 0 20px;">
-                            <h3>Shattered Veil</h3>
-                            <p>First-person adventure that doesn’t hold your hand</p>
-                            <a href="https://futuregames.itch.io/shattered-veil">View Project</a>
-                        </div>
-                    </div>
+ <div id="projects" class="background-alt" style="position: relative; padding: 50px 0;">
+    <!-- Arka Plan Div'i -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/view2.jpg'); background-size: cover; background-position: center; opacity: 0.7;"></div>
     
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
-                        <div style="flex: 1; text-align: left; padding: 0 20px;">
-                            <h3>Gameplay Programmer</h3>
-                            <p>
-                                During my time on this project, I designed and managed in-game events to create a dynamic and engaging experience. I developed a state management system to control the overall game flow and built interactive systems that allowed players to engage with the environment. Additionally, I ensured that both players and enemies respawned correctly, contributing to a seamless gameplay experience. I implemented menu and UI systems to enhance usability, including a blood screen effect to improve visual feedback. My role also involved managing player and enemy interactions by handling death events and their consequences. Furthermore, I enhanced the game's audio experience by integrating FMOD improvements, refining the overall sound design for greater immersion.
-                            </p>
-                        </div>
-                        <div class="project-video" style="width: 300px; height: 300px; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
-                            <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                <source src="videos/GP2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
+    <!-- İçerikler -->
+    <h2 class="heading">Projects</h2>
+        <div class="container">
+<div class="row">
+    <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; position: relative;">
+
+        <!-- Arka Plan Divi, opaklığı burada ayarlıyoruz -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/SV2.png'); background-size: cover; background-position: center; opacity: 1; z-index: 0;"></div>
+
+        <!-- İçerik (Yazılar vs.) -->
+        <div style="position: relative; z-index: 1; flex-grow: 1; text-align: center; padding: 0 20px;">
+            <h3 style="color: white;">Shattered Veil</h3>
+            <p style="color: white;">First-person adventure that doesn’t hold your hand</p>
+            <a href="https://futuregames.itch.io/shattered-veil" style="color: #04ff00;" target="_blank">View Project</a>
+        </div>
+
+        <!-- Bu kısımda Flex düzenlemesini düzeltelim -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding-top: 20px;">
+            
+            <!-- Text bloğu, sol tarafta -->
+            <div style="flex: 1; z-index: 1; text-align: left; padding: 0 20px;">
+                <h3 style="color: white;">Gameplay Programmer</h3>
+                <p style="color: white;">
+                    During my time on this project, I designed and managed in-game events to create a dynamic and engaging experience. I developed a state management system to control the overall game flow and built interactive systems that allowed players to engage with the environment. Additionally, I ensured that both players and enemies respawned correctly, contributing to a seamless gameplay experience. I implemented menu and UI systems to enhance usability, including a blood screen effect to improve visual feedback. My role also involved managing player and enemy interactions by handling death events and their consequences. Furthermore, I enhanced the game's audio experience by integrating FMOD improvements, refining the overall sound design for greater immersion.
+                </p>
+            </div>
+
+            <!-- Video bloğu, sağ tarafta -->
+            <div class="project-video" style="width: 300px; height: 300px; z-index: 1; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
+                <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    <source src="videos/GP2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
                 <!-- End .project -->
             <!-- </div>
         </div>
     </div> -->
     <div class="row">
-        <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 50px;">
-                <div class="project-image" style="width: 300px; height: 300px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                    <img src="images/TD.png" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
-                </div>
-                <div style="flex-grow: 1; text-align: center; padding: 0 20px;">
-                    <h3>Tom the Dragon</h3>
-                    <p>Fun, relaxing 3D platformer designed for kids</p>
-                    <a href="https://futuregames.itch.io/tomthedragon">View Project</a>
-                </div>
+    <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; position: relative;">
+
+        <!-- Arka Plan Divi, opaklığı burada ayarlıyoruz -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/TD2.png'); background-size: inherit; background-position: center; opacity: 1; z-index: 0;"></div>
+
+        <!-- İçerik (Yazılar vs.) -->
+        <div style="position: relative; z-index: 1; flex-grow: 1; text-align: center; padding: 0 20px;">
+            <h3 style="color: white;">Tom the Dragon</h3>
+            <p style="color: white;">Fun, relaxing 3D platformer designed for kids</p>
+            <a href="https://futuregames.itch.io/tomthedragon" style="color: #04ff00;" target="_blank">View Project</a>
+        </div>
+
+        <!-- Bu kısımda Flex düzenlemesini düzeltelim -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding-top: 20px;">
+            
+            <!-- Text bloğu, sol tarafta -->
+            <div style="flex: 1; z-index: 1; text-align: left; padding: 0 20px;">
+                <h3 style="color: white;">Gameplay Programmer</h3>
+                <p style="color: white;">
+                        Fueling the game’s heartbeat with a blend of technical precision and creative flair, I engineered innovative lava mechanics that transformed volatile elements into engaging gameplay. I meticulously fine-tuned player-lava interactions, ensuring every encounter felt both perilous and realistic, while developing a robust game state system that maintained smooth, responsive flow. An intuitive menu system was seamlessly integrated to enhance usability, and I proactively tackled and resolved bugs across a myriad of in-game events to guarantee stability. Complementing these efforts, I elevated the visual appeal and user interface, and refined player interactions to create a truly immersive gaming experience.
+                </p>
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%;">
-                <div style="flex: 1; text-align: left; padding: 0 20px;">
-                    <h3>Gameplay Programmer</h3>
-                    <p>
-                        Fueling the game’s heartbeat with a blend of technical precision and creative flair, I engineered innovative lava mechanics that transformed volatile elements into engaging gameplay. I meticulously fine-tuned player-lava interactions, ensuring every encounter felt both perilous and realistic, while developing a robust game state system that maintained smooth, responsive flow. An intuitive menu system was seamlessly integrated to enhance usability, and I proactively tackled and resolved bugs across a myriad of in-game events to guarantee stability. Complementing these efforts, I elevated the visual appeal and user interface, and refined player interactions to create a truly immersive gaming experience.
-                    </p>
-                </div>
-                <div class="project-video" style="width: 300px; height: 300px; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
-                    <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                        <source src="videos/TD_GP1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <!-- Video bloğu, sağ tarafta -->
+            <div class="project-video" style="width: 300px; height: 300px; z-index: 1; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
+                <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    <source src="videos/TD_GP1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
+    </div>
+</div>
 
     <!-- <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
@@ -173,57 +232,61 @@
     </div> -->
     <!-- End #experience -->
 
-    <div id="education">
+    <!-- <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>Futuregames Warsaw</h3>
             <span class="education-date">(Ongoing)</span>
             <h4>Game Programming</h4>
-        </div>
+        </div> -->
         <!-- End .education-block -->
 
-        <div class="education-block">
+        <!-- <div class="education-block">
             <h3>Girne American University</h3>
             <span class="education-date">Graduated in 2022</span>
             <h4>Electrical Electronics Engineering</h4>
-        </div>
+        </div> -->
         <!-- End .education-block -->
-    </div>
+    <!-- </div> -->
     <!-- End #education -->
 
+</div>
     
 
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
+<div id="skills" style="background-color: black; color: white; padding: 20px;">
+        <h2 class="heading" style="color: white">Skills</h2>
         <ul>
-            <li>C#</li>
+            <li>Unreal</li>
+            <li>C++</li>
             <li>Unity</li>
-            <li>GIT</li>
+            <li>C#</li>
             <li>Perforce</li>
+            <li>GIT</li>
+            <li>Visual Studio</li>
+            <li>Rider</li>
+            <li>VS Code</li>
             <li>ASP.NET</li>
             <li>ASP.NET MVC</li>
             <li>HTML5</li>
             <li>CSS</li>
-            <li>Bootstrap</li>
-            <li>JQuery</li>
             <li>SQL</li>
             <li>MySql</li>
+            <li>Jira</li>
+            <li>Miro</li>
             <li>Autodesk</li>
-            <li>Blender</li>
-            <li>Maya</li>
         </ul>
     </div>
     <!-- End #skills -->
 
-    <div id="contact">
-        <h2 class="heading" style="font-size: 28px;">Socials</h2>
+    <div id="contact" style="background-color: black; color: white;">
+        <h2 class="heading" style="font-size: 28px; color: white">Socials</h2>
         <div class="col-sm-12 social" style="display: flex; justify-content: center; align-items: center;">
             <ul>
                 <li> 
-                    <a href="https://github.com/DogusYigit" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://github.com/DogusYigit" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true" style="color: #000000;"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/dogus-yigit-elmali/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/dogus-yigit-elmali/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true" style="color: rgb(0, 0, 0);"></i></a>
                 </li>
             </ul>
         </div>
@@ -235,13 +298,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 copyright">
-                    <p>
+                    <p style="color: #000000;">
                         Copyright &copy; <span id="current-year">2025</span> DOĞUŞ YİĞİT ELMALI
                     </p>
                 </div>
                 <div class="col-sm-2 top">
                     <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-up" aria-hidden="true" ></i>
                     </span>
                 </div>
                 <div class="col-sm-5">
