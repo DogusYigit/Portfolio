@@ -123,98 +123,134 @@
     
     <h2 class="heading">Projects</h2>
         <div class="container">
+
 <div class="row">
-    <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; position: relative;">
+    <div class="project shadow-large position-relative d-flex flex-column align-items-center mb-4">
 
-    <!-- Background Div -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/SV2.png'); background-size: cover; background-position: center; opacity: 1; z-index: 0;"></div>
+        <!-- Background Div -->
+        <div class="position-absolute top-0 start-0 w-600 h-600" 
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/SV2.png'); background-size: inherit; background-position: center; opacity: 1; z-index: 0;"></div>
 
-        <div style="position: relative; z-index: 1; flex-grow: 1; text-align: center; padding: 0 20px;">
-            <h3 style="color: white;">Shattered Veil</h3>
-            <p style="color: white;">First-person adventure that doesn’t hold your hand</p>
-            <a href="https://futuregames.itch.io/shattered-veil" style="color: #04ff00;" target="_blank">View Project</a>
+        <!-- Title & Short Description -->
+        <div class="position-relative z-1 text-center p-3">
+            <h3 class="text-white" style="z-index: 1;position: relative; color: white;">Shattered Veil</h3>
+            <p class="text-white mb-2" style="z-index: 1; position: relative; color: white;">First-person adventure that doesn’t hold your hand</p>
+            <a href="https://futuregames.itch.io/shattered-veil" class="text-success fw-bold" style="z-index: 1; position: relative; color:#04ff00;" target="_blank"> View Project</a>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding-top: 20px;">
-            
-            <div style="flex: 1; z-index: 1; text-align: left; padding: 0 20px;">
-                <h3 style="color: white;">Gameplay Programmer</h3>
-                <p style="color: white;">
+        <!-- Content Area -->
+        <div class="row position-relative z-1 w-100 px-3 pb-3 g-4">
+
+            <!-- Left Text -->
+            <div class="col-12 col-lg-7 text-white" style="z-index: 1; position: relative; color: white; text-align: left; padding: 0 30px;">
+                <h3>Gameplay Programmer</h3>
+                <p>
 As a part of this project I drafted and administrated in-game events to make for an interesting experience. I had a state manager to manage the overall flow of the games and interactive systems that allowed players to interact with in-game environment. I've also made sure that players and enemies were respawned correctly, to add in with a good gaming experience. I added menu + UI for better usability, a blood screen effect for more visual feedback and player state interactions with enemies and dealing with death events, effects of dying. Also, enhanced the game's audio experience by integrating FMOD improvements, refining the overall sound design for greater immersion.                </p>
+                </p>
             </div>
 
-            <div class="project-video" style="width: 300px; height: 300px; z-index: 1; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
-                <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                    <source src="videos/GP2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-                <!-- End .project -->
-            <!-- </div>
-        </div>
-    </div> -->
-<div class="row">
-    <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; position: relative;">
-
-    <!-- Background Div -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/TD2.png'); background-size: inherit; background-position: center; opacity: 1; z-index: 0;"></div>
-
-        <div style="position: relative; z-index: 1; flex-grow: 1; text-align: center; padding: 0 20px;">
-            <h3 style="color: white;">Tom the Dragon</h3>
-            <p style="color: white;">Fun, relaxing 3D platformer designed for kids</p>
-            <a href="https://futuregames.itch.io/tomthedragon" style="color: #04ff00;" target="_blank">View Project</a>
-        </div>
-
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding-top: 20px;">
-            
-            <div style="flex: 1; z-index: 1; text-align: left; padding: 0 20px;">
-                <h3 style="color: white;">Gameplay Programmer</h3>
-                <p style="color: white;">
-To pulse the game's heartbeat with a mix of technical adherence and imagination, I designed novel lava mechanics that turned deadly components into emergent gameplay. I lovingly tuned the players falling into lava, making every interaction harrowing and believable while implementing a rich game state system that kept player input feeling tight and instant. I smoothly implemented an intuitive menu system to improve user experience and I also addressed a variety of implementation bugs for the numerous in game events, making sure that the product is solid. Alongside this, I pushed the visuals and UI, improving player interaction to turn it into a fuller experience.                </p>
+            <!-- Video -->
+            <div class="col-12 col-lg-5 d-flex justify-content-center" style="justify-items: center;">
+                <div class="project-video bg-black d-flex justify-content-center align-items-center" 
+                     style="width: 100%; max-width: 300px; aspect-ratio: 1/1; overflow: hidden; border-radius: 8px;">
+                    <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        <source src="videos/GP2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
 
-            <div class="project-video" style="width: 300px; height: 300px; z-index: 1; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
-                <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                    <source src="videos/TD_GP1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
         </div>
     </div>
 </div>
 
 
+
 <div class="row">
-    <div class="project shadow-large" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; position: relative;">
+    <div class="project shadow-large position-relative d-flex flex-column align-items-center mb-4">
 
-    <!-- Background Div -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/BB.png'); background-size: inherit; background-position: center; opacity: 1; z-index: 0;"></div>
+        <!-- Background Div -->
+        <div class="position-absolute top-0 start-0 w-600 h-600" 
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/TD2.png'); background-size: inherit; background-position: center; opacity: 1; z-index: 0;"></div>
 
-        <div style="position: relative; z-index: 1; flex-grow: 1; text-align: center; padding: 0 20px;">
-            <h3 style="color: white;">Blight Bound</h3>
-            <p style="color: white;">Fun, relaxing 3D platformer designed for kids</p>
-            <a href="https://futuregames.itch.io/blight-bound" style="color: #04ff00;" target="_blank">View Project</a>
+        <!-- Title & Short Description -->
+        <div class="position-relative z-1 text-center p-3">
+            <h3 class="text-white" style="z-index: 1;position: relative; color: white;">Tom the Dragon</h3>
+            <p class="text-white mb-2" style="z-index: 1; position: relative; color: white;">Fun, relaxing 3D platformer designed for kids</p>
+            <a href="https://futuregames.itch.io/tomthedragon" class="text-success fw-bold" style="z-index: 1; position: relative; color:#04ff00;" target="_blank">View Project</a>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; padding-top: 20px;">
-            
-            <div style="flex: 1; z-index: 1; text-align: left; padding: 0 20px;">
-                <h3 style="color: white;">PO / Gameplay Programmer</h3>
-                <p style="color: white;">
-I was the product owner on this project, which meant that I had to direct where this game went, take decisions on its development and make sure everyone else in the project were able to do their work as best as possible. I focused on not losing sight of the big picture and keeping the project coherent, which was challenging at such a low level but ultimately very rewarding, especially with 14 developers reporting directly to me.
+        <!-- Content Area -->
+        <div class="row position-relative z-1 w-100 px-3 pb-3 g-4">
 
-<br>Besides leading the project, I did programming on the game's core gameplay elements (specifically for: camera, object pickup/drop/carry mechanics, gates, player death/reset & checkpoint systems, main menu and pause menu). This dual responsibility allowed me to grow not only as a developer but also as a team leader.                </p>
+            <!-- Left Text -->
+            <div class="col-12 col-lg-7 text-white" style="z-index: 1; position: relative; color: white; text-align: left; padding: 0 30px;">
+                <h3>Gameplay Programmer</h3>
+                <p>
+                 To pulse the game's heartbeat with a mix of technical adherence and imagination, I designed novel lava mechanics that turned deadly components into emergent gameplay. I lovingly tuned the players falling into lava, making every interaction harrowing and believable while implementing a rich game state system that kept player input feeling tight and instant. I smoothly implemented an intuitive menu system to improve user experience and I also addressed a variety of implementation bugs for the numerous in game events, making sure that the product is solid. Alongside this, I pushed the visuals and UI, improving player interaction to turn it into a fuller experience.                </p>
+                </p>
             </div>
 
-            <div class="project-video" style="width: 300px; height: 300px; z-index: 1; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #000; flex-shrink: 0;">
-                <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                    <source src="videos/BlightBound.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <!-- Video -->
+            <div class="col-12 col-lg-5 d-flex justify-content-center" style="justify-items: center;">
+                <div class="project-video bg-black d-flex justify-content-center align-items-center" 
+                     style="width: 100%; max-width: 300px; aspect-ratio: 1/1; overflow: hidden; border-radius: 8px;">
+                    <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        <source src="videos/TD_GP1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="project shadow-large position-relative d-flex flex-column align-items-center mb-4">
+
+        <!-- Background Div -->
+        <div class="position-absolute top-0 start-0 w-600 h-600" 
+                style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/BB.png'); background-size: inherit; background-position: center; opacity: 1; z-index: 0;"></div>
+
+        <!-- Title & Short Description -->
+        <div class="position-relative z-1 text-center p-3">
+            <h3 class="text-white" style="z-index: 1;position: relative; color: white;">Blight Bound</h3>
+            <p class="text-white mb-2" style="z-index: 1; position: relative; color: white;">A 3D platformer featuring a mini story</p>
+            <a href="https://futuregames.itch.io/blight-bound" class="text-success fw-bold" style="z-index: 1; position: relative; color:#04ff00;" target="_blank">View Project</a>
+        </div>
+
+        <!-- Content Area -->
+        <div class="row position-relative z-1 w-100 px-3 pb-3 g-4">
+
+            <!-- Left Text -->
+            <div class="col-12 col-lg-7 text-white" style="z-index: 1; position: relative; color: white; text-align: left;">
+                <h3>PO / Gameplay Programmer</h3>
+                <p>
+                    I was the product owner on this project, which meant that I had to direct where this game went, 
+                    take decisions on its development and make sure everyone else in the project were able to do their 
+                    work as best as possible. I focused on not losing sight of the big picture and keeping the project 
+                    coherent, which was challenging at such a low level but ultimately very rewarding, especially with 
+                    14 developers reporting directly to me.
+                    <br><br>
+                    Besides leading the project, I did programming on the game's core gameplay elements 
+                    (specifically for: camera, object pickup/drop/carry mechanics, gates, player death/reset & checkpoint 
+                    systems, main menu and pause menu). This dual responsibility allowed me to grow not only as a developer 
+                    but also as a team leader.
+                </p>
+            </div>
+
+            <!-- Video -->
+            <div class="col-12 col-lg-5 d-flex justify-content-center" style="justify-items: center;">
+                <div class="project-video bg-black d-flex justify-content-center align-items-center" 
+                     style="width: 100%; max-width: 300px; aspect-ratio: 1/1; overflow: hidden; border-radius: 8px;">
+                    <video controls style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        <source src="videos/BlightBound.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -222,28 +258,19 @@ I was the product owner on this project, which meant that I had to direct where 
     <!-- <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="March 2024 - August 2024">
-                <h3>Yönetilen Bilgi Sistemleri A.S. / ISTANBUL</h3>
-                <h4>Web Developer</h4>
+            <div data-date="X">
+                <h3>X</h3>
+                <h4>X</h4>
                 <p>
-                    I contributed to web development by working on both frontend and backend
-                    coding. I was involved in creating projects from scratch, as well as enhancing
-                    and modifying existing ones. This included designing user interfaces and
-                    ensuring the seamless integration of various components to deliver high-quality
-                    web solutions.
+                  X
                 </p>
             </div> -->
 
-            <!-- <div data-date="July 2023 - October 2023">
-                <h3>Elektromak / IZMIR</h3>
-                <h4>Electrical Engineer</h4>
+            <!-- <div data-date="X">
+                <h3>X</h3>
+                <h4>X</h4>
                 <p>
-                    During my time in this role, I developed a understanding of the tasks between
-                    the Field Coordination team, identified field-related shortcomings, and promptly
-                    communicated them to the relevant parties. I was responsible for completing
-                    the necessary documentation, including control forms, for project finalization.
-                    This direct involvement with both sides of the operation allowed me to gain an
-                    insight into the work being conducted.
+                    X
                 </p>
             </div> -->
         <!-- </div>
@@ -253,16 +280,16 @@ I was the product owner on this project, which meant that I had to direct where 
     <!-- <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
-            <h3>Futuregames Warsaw</h3>
-            <span class="education-date">(Ongoing)</span>
-            <h4>Game Programming</h4>
+            <h3>X</h3>
+            <span class="education-date">X</span>
+            <h4>X</h4>
         </div> -->
         <!-- End .education-block -->
 
         <!-- <div class="education-block">
-            <h3>Girne American University</h3>
-            <span class="education-date">Graduated in 2022</span>
-            <h4>Electrical Electronics Engineering</h4>
+            <h3>X</h3>
+            <span class="education-date">X</span>
+            <h4>X</h4>
         </div> -->
         <!-- End .education-block -->
     <!-- </div> -->
